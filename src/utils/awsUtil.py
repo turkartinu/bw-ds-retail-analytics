@@ -2,8 +2,8 @@ import boto3
 from vaultUtil import VaultClient
 
 VAULT_URL = "http://127.0.0.1:8200"
-ROLE_ID = "8f4f0590-fcd9-177e-4022-5541566eec6d"
-SECRET_ID = "ec367959-bed1-f58b-e1b9-3749bb445aa0"
+ROLE_ID = "f1415db9-3ff3-5a07-7813-3afc6f2e8620"
+SECRET_ID = "e6d81399-98cc-6a30-8e66-5234e3a2f3f3"
 SECRET_PATH = "secret/data/aws"
 
 vault_client = VaultClient(VAULT_URL, ROLE_ID, SECRET_ID, SECRET_PATH)
@@ -52,7 +52,7 @@ class AWSConnector:
         aws_client_conn = self.session.client(self.aws_client)
         return aws_client_conn
 
-# Create an instance of the AWSConnector class
+#Create an instance of the AWSConnector class
 client='s3'
 aws_connector = AWSConnector(aws_access_key, aws_secret_key, client, region)
 
